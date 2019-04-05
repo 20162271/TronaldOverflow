@@ -8,11 +8,11 @@
 - Entity has these attributes:
     - ID - String
     ```
-       - No Restrictions
+       - Joi.string().max(22);
     ```
     - Value - String, Quote main text.
     ```
-       - No Restrictions
+       - Joi.string().max(1000);
     ```
     - Source URL - String, which defines URL to the source of the Quote.
     ```
@@ -37,15 +37,37 @@
 
 ## API definition
 - The main information that this WEB system GET from API is Random Quote and Random Meme.
-- APIs methods (used by this WEB system):
+- API methods (used by this WEB system):
     - GET Random Quote:
-    ```
+        ```
         - GET https://api.tronalddump.io/random/quote
-    ```
+        ```
+        - 404 {"status":404,"message":"No route found"}
     - GET Random Meme:
-    ```
+        ```
         - GET https://api.tronalddump.io/random/meme
-    ```
+        ```
+        - 404 {"status":404,"message":"No route found"}
+    - GET Daily Quote list:
+        ```
+        - GET /api/quote?size=:size
+        ```
+        - 400 {"status":400,"message":"No quotes found"}
+    - POST Rating for the specific Quote:
+        ```
+        - POST /api/quote/:id/rating
+        ```
+        - 400 {"status":400,"message":"No quote ${id} found"}
+    - DELETE User rating for the specific Quote:
+        ```
+        - DELETE /api/quote/:id/rating
+        ```
+        - 400 {"status":400,"message":"No quote ${id} found"}
+    - GET Daily meme:
+        ```
+        - GET /api/quote/:id/meme
+        ```
+        - 400 {"status":400,"message":"No meme ${id} found"}
 
 ## UI definition
 ```
