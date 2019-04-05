@@ -52,22 +52,22 @@
         ```
         - GET /api/quote?size=:size
         ```
-        - 400 {"status":400,"message":"No quotes found"}
+        - 400 {"status":400,"message":"Invalid size"}
     - POST Rating for the specific Quote:
         ```
         - POST /api/quote/:id/rating
         ```
-        - 400 {"status":400,"message":"No quote ${id} found"}
+        - 400 {"status":400,"message":"Invalid quote ID"}
     - DELETE User rating for the specific Quote:
         ```
         - DELETE /api/quote/:id/rating
         ```
-        - 400 {"status":400,"message":"No quote ${id} found"}
+        - 400 {"status":400,"message":"Ivalid quote ID"}
     - GET Daily meme:
         ```
         - GET /api/quote/:id/meme
         ```
-        - 400 {"status":400,"message":"No meme ${id} found"}
+        - 400 {"status":400,"message":"Ivalid meme ID"}
 
 ## UI definition
 ```
