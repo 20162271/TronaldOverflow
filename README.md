@@ -58,11 +58,13 @@
         - POST /api/quote/:id/rating
         ```
         - 400 {"status":400,"message":"Invalid quote ID"}
+        - 403 {"status":403,"message":"Voting ended for this meme"}
     - DELETE User rating for the specific Quote:
         ```
         - DELETE /api/quote/:id/rating
         ```
         - 400 {"status":400,"message":"Ivalid quote ID"}
+        - 403 {"status":403,"message":"Voting ended for this meme"}
     - GET Daily meme:
         ```
         - GET /api/quote/:id/meme
