@@ -4,7 +4,7 @@
 - The system shows a list of daily generated quotes of Donald Trump. The system allows to rate (Like / Dislike) the quote for users.
 
 ## Entity definition
-- The main entity of thi WEB systems is a Quote.
+- The main entity of this WEB systems is a Quote.
 - Entity has these attributes:
     - ID - String
     ```
